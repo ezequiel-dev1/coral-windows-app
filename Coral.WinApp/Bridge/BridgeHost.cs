@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace Coral.PrinterBridge.Console.Bridge;
+namespace Coral.WinApp.Bridge;
 
 public sealed class BridgeHost : IAsyncDisposable
 {

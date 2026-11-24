@@ -1,7 +1,7 @@
 using System.Windows;
-using Coral.PrinterBridge.Console.Bridge;
+using Coral.WinApp.Bridge;
 
-namespace Coral.PrinterBridge.Console;
+namespace Coral.WinApp;
 
 public partial class App : Application
 {

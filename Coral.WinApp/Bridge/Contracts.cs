@@ -1,6 +1,6 @@
 using System.Text.Json;
 
-namespace Coral.PrinterBridge.Console.Bridge;
+namespace Coral.WinApp.Bridge;
 
 public sealed record ApiResult(bool Ok, string Message);
 public enum PrinterTarget { Kitchen, Register }

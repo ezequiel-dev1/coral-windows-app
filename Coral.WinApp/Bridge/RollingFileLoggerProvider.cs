@@ -1,4 +1,4 @@
-namespace Coral.PrinterBridge.Console.Bridge;
+namespace Coral.WinApp.Bridge;
 
 public sealed class RollingFileLoggerProvider(string directory) : ILoggerProvider
 {

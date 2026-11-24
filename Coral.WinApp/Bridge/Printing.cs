@@ -1,7 +1,7 @@
 using System.Net.Sockets;
 using System.Text;
 
-namespace Coral.PrinterBridge.Console.Bridge;
+namespace Coral.WinApp.Bridge;
 
 public static class EscPosRenderer
 {

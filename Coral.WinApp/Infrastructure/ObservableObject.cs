@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace Coral.PrinterBridge.Console.Infrastructure;
+namespace Coral.WinApp.Infrastructure;
 
 public abstract class ObservableObject : INotifyPropertyChanged
 {

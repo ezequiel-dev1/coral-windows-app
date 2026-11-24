@@ -3,7 +3,7 @@ using System.IO.Pipes;
 using System.Text;
 using System.Text.Json;
 
-namespace Coral.PrinterBridge.Console.Management;
+namespace Coral.WinApp.Management;
 
 public interface IManagementPipeClient
 {

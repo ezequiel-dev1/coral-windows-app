@@ -1,7 +1,7 @@
-using Coral.PrinterBridge.Console.Bridge;
-using Coral.PrinterBridge.Console.Infrastructure;
+using Coral.WinApp.Bridge;
+using Coral.WinApp.Infrastructure;
 
-namespace Coral.PrinterBridge.Console.ViewModels;
+namespace Coral.WinApp.ViewModels;
 
 public sealed class MainViewModel : ObservableObject
 {

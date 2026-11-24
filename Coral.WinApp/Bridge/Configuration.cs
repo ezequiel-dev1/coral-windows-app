@@ -1,6 +1,6 @@
 using System.Net;
 
-namespace Coral.PrinterBridge.Console.Bridge;
+namespace Coral.WinApp.Bridge;
 
 public sealed class BridgeOptions { public HttpOptions Http { get; init; } = new(); public string[] AllowedOrigins { get; init; } = []; public PrinterOptions Printers { get; init; } = new(); public TimeoutOptions Timeouts { get; init; } = new(); }
 public sealed class HttpOptions { public string Address { get; init; } = "127.0.0.1"; public int Port { get; init; } = 8765; }

@@ -1,13 +1,13 @@
-# Coral Printer Bridge Console — Surface installation
+# Coral — Surface installation
 
 ## Install
 
-1. Copy `Coral.PrinterBridge.Console.Installer.exe` to the Surface.
+1. Copy `Coral.WinApp.Installer.exe` to the Surface.
 2. Right-click the file and select **Run as administrator**.
 3. Approve the Windows security prompt.
-4. When installation completes, open **Start** and select **Coral > Coral Printer Bridge Console**.
+4. When installation completes, open **Start** and select **Coral > Coral**.
 
-The installer places the application in `C:\Program Files\Coral\PrinterBridgeConsole` and configures it to start silently when a Surface user signs in. A separate Windows service is not required.
+The installer places the application in `C:\Program Files\Coral\WinApp` and configures it to start silently when a Surface user signs in. A separate Windows service is not required. It automatically removes the prior Coral Printer Bridge installation, startup entry, shortcut, and legacy service first.
 
 ## Configure printers
 
@@ -32,11 +32,11 @@ Replace `10.0.0.100` and `10.0.0.101` with the actual static IP addresses of the
 
 Sign out and sign back in to the Surface, or restart it. The background bridge reads the settings when it starts.
 
-Open **Coral Printer Bridge Console** from Start and use the **Printers** tab to run a connection check and print a test receipt for each printer.
+Open **Coral** from Start and use the **Printers** tab to run a connection check and print a test receipt for each printer.
 
 ## Troubleshooting
 
 - Coral Admin must point to `http://127.0.0.1:8765`.
 - The Surface user must have signed in; this app starts at user sign-in, not before it.
 - Logs are in `C:\ProgramData\Coral\PrinterBridge\logs`.
-- Do not install the old `CoralPrinterBridge` Windows service alongside this app; both use port `8765`.
+- The installer removes the old `CoralPrinterBridge` Windows service so it cannot compete for port `8765`.

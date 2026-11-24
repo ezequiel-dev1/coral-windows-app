@@ -1,11 +1,11 @@
 using System.Text.Json;
 
-namespace Coral.PrinterBridge.Console.Management;
+namespace Coral.WinApp.Management;
 
 public static class ManagementProtocol
 {
     public const int MajorVersion = 1;
-    public const string PipeName = "Coral.PrinterBridge.Management";
+    public const string PipeName = "Coral.WinApp.Management";
     public const int MaximumMessageBytes = 64 * 1024;
 }
 

@@ -1,6 +1,6 @@
 using System.Windows.Input;
 
-namespace Coral.PrinterBridge.Console.Infrastructure;
+namespace Coral.WinApp.Infrastructure;
 
 public sealed class AsyncRelayCommand(Func<Task> execute, Func<bool>? canExecute = null) : ICommand
 {
