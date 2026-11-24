@@ -1,0 +1,25 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coral.PrinterBridge.Console", "Coral.PrinterBridge.Console\Coral.PrinterBridge.Console.csproj", "{2B2AA3EC-8E2C-422C-A7AB-00F752D3ECA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coral.PrinterBridge.Console.Installer", "Coral.PrinterBridge.Console.Installer\Coral.PrinterBridge.Console.Installer.csproj", "{CA480F07-C9FD-42AA-9B52-74DB7685800E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B2AA3EC-8E2C-422C-A7AB-00F752D3ECA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B2AA3EC-8E2C-422C-A7AB-00F752D3ECA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B2AA3EC-8E2C-422C-A7AB-00F752D3ECA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B2AA3EC-8E2C-422C-A7AB-00F752D3ECA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA480F07-C9FD-42AA-9B52-74DB7685800E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA480F07-C9FD-42AA-9B52-74DB7685800E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA480F07-C9FD-42AA-9B52-74DB7685800E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA480F07-C9FD-42AA-9B52-74DB7685800E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
