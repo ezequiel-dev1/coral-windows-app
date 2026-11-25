@@ -1,9 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <AssemblyName>Coral.WinApp.Installer</AssemblyName>
     <Product>Coral Installer</Product>
+    <ApplicationIcon>..\Coral.WinApp\Assets\Coral.ico</ApplicationIcon>
     <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -12,5 +15,8 @@
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="..\artifacts\publish\**\*" LogicalName="Payload/%(RecursiveDir)%(Filename)%(Extension)" WithCulture="false" />
+    <Resource Include="..\Coral.WinApp\Assets\CoralBrandIcon.png" Link="Assets\CoralBrandIcon.png" />
+    <Resource Include="..\Coral.WinApp\Assets\Coral.ico" Link="Assets\Coral.ico" />
+    <Resource Include="..\Coral.WinApp\Assets\CoralBrandHorizontal.png" Link="Assets\CoralBrandHorizontal.png" />
   </ItemGroup>
 </Project>

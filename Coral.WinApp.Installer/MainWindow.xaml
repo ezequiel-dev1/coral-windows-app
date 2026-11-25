@@ -1,0 +1,71 @@
+<Window x:Class="Coral.WinApp.Installer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Instalar Coral" Width="860" Height="590" MinWidth="760" MinHeight="540"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="White">
+  <Grid>
+    <Grid.ColumnDefinitions><ColumnDefinition Width="292" /><ColumnDefinition Width="*" /></Grid.ColumnDefinitions>
+    <Grid Background="{StaticResource CoralBlueBrush}">
+      <Grid Margin="36">
+        <Grid.RowDefinitions><RowDefinition Height="Auto" /><RowDefinition Height="*" /><RowDefinition Height="Auto" /></Grid.RowDefinitions>
+        <StackPanel>
+          <Border Width="60" Height="60" Background="White" CornerRadius="30" HorizontalAlignment="Left">
+            <Image Source="Assets/CoralBrandIcon.png" Margin="8" Stretch="Uniform" />
+          </Border>
+          <TextBlock Text="CORAL" Margin="0,22,0,0" FontFamily="Georgia" FontSize="32" FontWeight="Bold" Foreground="White" />
+          <TextBlock Text="REEF &amp; BEEF" Margin="1,2,0,0" FontSize="11" FontWeight="SemiBold" Foreground="#C2C7DC" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" VerticalAlignment="Center">
+          <TextBlock Text="Puente de impresión" FontSize="26" FontWeight="SemiBold" Foreground="White" />
+          <TextBlock Text="Impresión local confiable para Coral Admin." Margin="0,10,0,0" FontSize="15" Foreground="#E4E8F5" TextWrapping="Wrap" LineHeight="22" />
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+          <Border Height="1" Background="#5566AD" Margin="0,0,0,16" />
+          <TextBlock Text="Se configurarán automáticamente un acceso directo en Inicio y el inicio de sesión automático." FontSize="12" Foreground="#C2C7DC" TextWrapping="Wrap" LineHeight="18" />
+        </StackPanel>
+      </Grid>
+    </Grid>
+
+    <Grid Grid.Column="1" Margin="48,42,48,34">
+      <Grid.RowDefinitions><RowDefinition Height="*" /><RowDefinition Height="Auto" /></Grid.RowDefinitions>
+      <Grid x:Name="WelcomePanel">
+        <StackPanel VerticalAlignment="Center">
+          <TextBlock Text="Instalar Coral" FontFamily="Georgia" FontSize="34" FontWeight="Bold" Foreground="{StaticResource CoralInkBrush}" />
+          <TextBlock Text="Este asistente instala el puente de impresión Coral en este dispositivo Windows." Margin="0,12,0,0" FontSize="16" Foreground="{StaticResource CoralMutedBrush}" TextWrapping="Wrap" LineHeight="24" />
+          <Border Background="{StaticResource CoralPaperBrush}" BorderBrush="{StaticResource CoralLineBrush}" BorderThickness="1" CornerRadius="8" Padding="20" Margin="0,30,0,0">
+            <StackPanel>
+              <TextBlock Text="INCLUYE" FontSize="11" FontWeight="Bold" Foreground="{StaticResource CoralBlueBrush}" />
+              <TextBlock Text="• Puente de impresión local para Coral Admin" Margin="0,12,0,0" Foreground="{StaticResource CoralInkBrush}" />
+              <TextBlock Text="• Herramientas de prueba para impresoras de cocina y caja" Margin="0,9,0,0" Foreground="{StaticResource CoralInkBrush}" />
+              <TextBlock Text="• Inicio automático después de iniciar sesión" Margin="0,9,0,0" Foreground="{StaticResource CoralInkBrush}" />
+            </StackPanel>
+          </Border>
+          <TextBlock Text="Es posible que se te pida permitir que este instalador haga cambios en el dispositivo." Margin="0,22,0,0" FontSize="12" Foreground="{StaticResource CoralMutedBrush}" TextWrapping="Wrap" />
+        </StackPanel>
+      </Grid>
+      <Grid x:Name="ProgressPanel" Visibility="Collapsed">
+        <StackPanel VerticalAlignment="Center">
+          <TextBlock Text="Instalando Coral" FontFamily="Georgia" FontSize="34" FontWeight="Bold" Foreground="{StaticResource CoralInkBrush}" />
+          <TextBlock x:Name="ProgressText" Text="Preparando la instalación…" Margin="0,12,0,0" FontSize="16" Foreground="{StaticResource CoralMutedBrush}" />
+          <ProgressBar IsIndeterminate="True" Height="8" Margin="0,28,0,0" Foreground="{StaticResource CoralSalmonBrush}" Background="{StaticResource CoralPaperBrush}" />
+          <TextBlock Text="Mantén esta ventana abierta." Margin="0,15,0,0" FontSize="12" Foreground="{StaticResource CoralMutedBrush}" />
+        </StackPanel>
+      </Grid>
+      <Grid x:Name="CompletePanel" Visibility="Collapsed">
+        <StackPanel VerticalAlignment="Center">
+          <Border Width="48" Height="48" Background="#E5F1EA" CornerRadius="24" HorizontalAlignment="Left"><TextBlock Text="✓" FontSize="28" Foreground="#4F8469" HorizontalAlignment="Center" VerticalAlignment="Center" /></Border>
+          <TextBlock Text="Coral está listo" Margin="0,20,0,0" FontFamily="Georgia" FontSize="34" FontWeight="Bold" Foreground="{StaticResource CoralInkBrush}" />
+          <TextBlock Text="El puente de impresión Coral está instalado y se iniciará automáticamente cuando un usuario inicie sesión." Margin="0,12,0,0" FontSize="16" Foreground="{StaticResource CoralMutedBrush}" TextWrapping="Wrap" LineHeight="24" />
+          <Border Background="{StaticResource CoralPaperBrush}" BorderBrush="{StaticResource CoralLineBrush}" BorderThickness="1" CornerRadius="8" Padding="18" Margin="0,28,0,0">
+            <StackPanel><TextBlock Text="SIGUIENTE PASO" FontSize="11" FontWeight="Bold" Foreground="{StaticResource CoralBlueBrush}" /><TextBlock Text="Abre Coral y prueba las impresoras de cocina y caja. Las direcciones de las impresoras se guardan en:" Margin="0,9,0,0" Foreground="{StaticResource CoralInkBrush}" TextWrapping="Wrap" /><TextBlock x:Name="SettingsPathText" Margin="0,7,0,0" FontFamily="Consolas" FontSize="11" Foreground="{StaticResource CoralBlueBrush}" TextWrapping="Wrap" /></StackPanel>
+          </Border>
+        </StackPanel>
+      </Grid>
+      <DockPanel Grid.Row="1" LastChildFill="False" Margin="0,32,0,0">
+        <Button x:Name="CloseButton" Content="Cerrar" Style="{StaticResource SecondaryButtonStyle}" Click="CloseButton_Click" DockPanel.Dock="Left" />
+        <Button x:Name="InstallButton" Content="Instalar Coral" Style="{StaticResource PrimaryButtonStyle}" Click="InstallButton_Click" DockPanel.Dock="Right" />
+        <Button x:Name="LaunchButton" Content="Abrir Coral" Style="{StaticResource PrimaryButtonStyle}" Click="LaunchButton_Click" DockPanel.Dock="Right" Visibility="Collapsed" />
+      </DockPanel>
+    </Grid>
+  </Grid>
+</Window>

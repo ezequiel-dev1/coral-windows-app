@@ -1,0 +1,23 @@
+<Application x:Class="Coral.WinApp.Installer.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Application.Resources>
+    <SolidColorBrush x:Key="CoralBlueBrush" Color="#3D4F9B" />
+    <SolidColorBrush x:Key="CoralBlueDarkBrush" Color="#344585" />
+    <SolidColorBrush x:Key="CoralSalmonBrush" Color="#E48664" />
+    <SolidColorBrush x:Key="CoralPaperBrush" Color="#EAE7E4" />
+    <SolidColorBrush x:Key="CoralInkBrush" Color="#2B2B2B" />
+    <SolidColorBrush x:Key="CoralMutedBrush" Color="#7A7572" />
+    <SolidColorBrush x:Key="CoralLineBrush" Color="#DDD9D6" />
+    <Style x:Key="PrimaryButtonStyle" TargetType="Button">
+      <Setter Property="Background" Value="{StaticResource CoralBlueBrush}" /><Setter Property="Foreground" Value="White" />
+      <Setter Property="BorderBrush" Value="{StaticResource CoralBlueBrush}" /><Setter Property="BorderThickness" Value="0" />
+      <Setter Property="Padding" Value="24,12" /><Setter Property="MinWidth" Value="156" /><Setter Property="FontWeight" Value="SemiBold" />
+    </Style>
+    <Style x:Key="SecondaryButtonStyle" TargetType="Button">
+      <Setter Property="Background" Value="White" /><Setter Property="Foreground" Value="{StaticResource CoralBlueBrush}" />
+      <Setter Property="BorderBrush" Value="{StaticResource CoralLineBrush}" /><Setter Property="BorderThickness" Value="1" />
+      <Setter Property="Padding" Value="20,11" /><Setter Property="MinWidth" Value="112" /><Setter Property="FontWeight" Value="SemiBold" />
+    </Style>
+  </Application.Resources>
+</Application>

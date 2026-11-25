@@ -3,8 +3,10 @@
     <OutputType>WinExe</OutputType>
     <AssemblyName>Coral</AssemblyName>
     <Product>Coral</Product>
+    <ApplicationIcon>Assets\Coral.ico</ApplicationIcon>
     <TargetFramework>net8.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -13,6 +15,12 @@
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
     <Resource Include="Assets\Coral.png" />
+    <Resource Include="Assets\Coral.ico" />
+    <Resource Include="Assets\CoralBrandIcon.png" />
+    <Resource Include="Assets\CoralBrandHorizontal.png" />
     <Content Include="..\INSTALLATION.md" Link="INSTALLATION.md" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ModernWpfUI" Version="0.9.6" />
   </ItemGroup>
 </Project>

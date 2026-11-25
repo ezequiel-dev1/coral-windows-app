@@ -49,12 +49,12 @@ public sealed class TcpPrinterClient(BridgeOptions options, ILogger<TcpPrinterCl
                 if (!bytes.IsEmpty) { using var writeTimeout = new CancellationTokenSource(TimeSpan.FromSeconds(options.Timeouts.WriteSeconds)); await socket.GetStream().WriteAsync(bytes, writeTimeout.Token); await socket.GetStream().FlushAsync(writeTimeout.Token); }
                 return;
             }
-            catch (OperationCanceledException) when (!cancellationToken.IsCancellationRequested) { throw new PrinterException("Printer connection or write timed out."); }
+            catch (OperationCanceledException) when (!cancellationToken.IsCancellationRequested) { throw new PrinterException("Se agotó el tiempo de espera de conexión o escritura de la impresora."); }
             catch (SocketException ex) { lastError = ex; await Task.Delay(TimeSpan.FromSeconds(1), cancellationToken); }
-            catch (IOException ex) { throw new PrinterException("Printer write failed.", ex); }
+            catch (IOException ex) { throw new PrinterException("Falló la escritura en la impresora.", ex); }
         }
         logger.LogWarning(lastError, "Printer {Address}:{Port} unavailable", endpoint.Ip, endpoint.Port);
-        throw new PrinterException("Could not connect to the printer. Check that it is on and connected.", lastError);
+        throw new PrinterException("No se pudo conectar con la impresora. Verifica que esté encendida y conectada.", lastError);
     }
 }
 
